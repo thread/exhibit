@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   var urls = [
     "https://www.google.com",
     "https://www.example.com"
@@ -24,5 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   rotate();
-  });
-
+};
