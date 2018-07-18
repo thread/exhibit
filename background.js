@@ -6,11 +6,8 @@ var runApp = function() {
   chrome.app.window.create(
       'view.html',
       {
-        id: 'ExhibitWindow',
-        width: 1100,
-        height: 720,
-        minWidth: 800,
-        minHeight: 600
+        id: 'main',
+        state: 'fullscreen'
       },
   )
 };
