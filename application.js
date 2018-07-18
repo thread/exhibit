@@ -5,7 +5,9 @@ function start_rotation() {
   var storage = { urls: ['https://www.thread.com'] };
 
   chrome.storage.managed.get('urls', function(data) {
-    storage.urls = data.urls;
+    if (data.urls != undefined) {
+      storage.urls = data.urls;
+    }
   });
 
   var index = 0;
