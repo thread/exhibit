@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     "https://www.example.com"
   ];
 
+  const ROTATION_TIME = 5000;
+
   console.log(urls);
 
   var index = 0;
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     el.src = urls[index];
     index  = index + 1;
 
-    setTimeout(rotate, 5000);
+    setTimeout(rotate, ROTATION_TIME);
   }
 
   rotate();
