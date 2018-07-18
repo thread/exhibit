@@ -2,16 +2,20 @@ function start_rotation() {
   var el = document.getElementById("rotator");
   const ROTATION_TIME = 5000;
 
-  var urls = ['https://www.thread.com'];
+  var storage = { urls: ['https://www.thread.com'] };
+
+  chrome.storage.managed.get('urls', function(data) {
+    storage.urls = data.urls;
+  });
 
   var index = 0;
 
   function rotate() {
-    if ( index === urls.length ) {
+    if ( index === storage.urls.length ) {
       index = 0;
     }
 
-    el.src = urls[index];
+    el.src = storage.urls[index];
     index  = index + 1;
 
     setTimeout(rotate, ROTATION_TIME);
