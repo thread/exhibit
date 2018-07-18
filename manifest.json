@@ -1,0 +1,25 @@
+{
+    "app": {
+        "background": {
+            "scripts": [
+                "config.js",
+                "background.js"
+            ]
+        }
+    },
+    "icons": {
+        "128": "img/128.png"
+    },
+    "kiosk_enabled": true,
+    "manifest_version": 2,
+    "minimum_chrome_version": "37.0.0.0",
+    "name": "Exhibit",
+    "permissions": [
+        "webview",
+        "power"
+    ],
+    "storage": {
+        "managed_schema": "schema.json"
+    },
+    "version": "0.4"
+}
