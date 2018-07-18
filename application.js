@@ -1,16 +1,10 @@
-window.onload = function() {
-  var urls = [
-    "https://www.google.com",
-    "https://www.example.com"
-  ];
-
+function start_rotation() {
+  var el = document.getElementById("rotator");
   const ROTATION_TIME = 5000;
 
-  console.log(urls);
+  var urls = ['https://www.thread.com'];
 
   var index = 0;
-  var el = document.getElementById("rotator");
-  console.log(el);
 
   function rotate() {
     if ( index === urls.length ) {
@@ -25,3 +19,5 @@ window.onload = function() {
 
   rotate();
 };
+
+window.onload = start_rotation;
