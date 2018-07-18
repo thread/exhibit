@@ -15,6 +15,7 @@
     "minimum_chrome_version": "37.0.0.0",
     "name": "Exhibit",
     "permissions": [
+        "storage",
         "webview",
         "power"
     ],
