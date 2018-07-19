@@ -1,4 +1,12 @@
+function update_webviews() {
+  var el = document.getElementById("rotator");
+  el.style.height = document.documentElement.clientHeight + "px";
+  el.style.width = document.documentElement.clientWidth + "px";
+};
+
 function start_rotation() {
+  update_webviews();
+
   var el = document.getElementById("rotator");
 
   var storage = {
@@ -32,3 +40,5 @@ function start_rotation() {
 };
 
 window.onload = start_rotation;
+
+window.onresize = updateWebviews;
