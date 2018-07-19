@@ -1,13 +1,13 @@
 function update_webviews() {
-  var el = document.getElementById("rotator");
-  el.style.height = document.documentElement.clientHeight + "px";
-  el.style.width = document.documentElement.clientWidth + "px";
+  var webview = document.querySelector("webview");
+  webview.style.height = document.documentElement.clientHeight + "px";
+  webview.style.width = document.documentElement.clientWidth + "px";
 };
 
 function start_rotation() {
   update_webviews();
 
-  var el = document.getElementById("rotator");
+  var webview = document.querySelector("webview");
 
   var storage = {
     urls: ['https://www.thread.com', 'https://www.example.com'],
@@ -30,7 +30,7 @@ function start_rotation() {
       index = 0;
     }
 
-    el.src = storage.urls[index];
+    webview.src = storage.urls[index];
     index  = index + 1;
 
     setTimeout(rotate, storage.rotation_time);
