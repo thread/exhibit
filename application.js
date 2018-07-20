@@ -26,7 +26,7 @@ function start_rotation() {
   var index = 0;
 
   function rotate() {
-    if ( index === storage.urls.length ) {
+    if (index === storage.urls.length) {
       index = 0;
     }
 
